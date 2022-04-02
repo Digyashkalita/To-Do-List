@@ -1,69 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
 * {
-  border: 0;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  background-color: pink;
-  height: 100vh;
+body {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
-
-.list {
-  background-color: white;
-  height: 700px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  background-color: #fff;
   border-radius: 5px;
-  position: relative;
-}
-
-.items {
-  list-style-type: none;
-  width: 80%;
-}
-.items li {
-  padding: 6px 0 6px 0;
-  font-size: 20px;
-  text-align: left;
-  padding-left: 5px;
-  position: relative;
-}
-
-#btn {
-  background-color: pink;
-  border-radius: 5px;
-  bottom: 20px;
-  width: 81%;
-  height: 40px;
-  position: absolute;
-  font-size: 20px;
-}
-
-#input {
-  border: 1px solid pink;
-  width: 80%;
-  height: 40px;
-
-  border-radius: 5px;
-}
-#input:focus {
-  outline: none !important;
+  width: 400px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-  border-bottom: 1px solid pink;
-  width: 100%;
   text-align: center;
+  height: 100%;
+  margin: 0 0 20px;
 }
 
-.deleteBtn {
-  color: red;
-  position: absolute;
-  right: 40px;
+.items {
+  height: 500px;
+  width: 100%;
+}
+.form {
+  padding: 30px 40px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border: 2px solid #777;
+}
+
+.form button {
+  cursor: pointer;
+  display: block;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  border-color: 2px solid #3498db;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
 }
