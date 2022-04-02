@@ -23,12 +23,38 @@ h1 {
   text-align: center;
   height: 100%;
   margin: 0 0 20px;
+  padding: 10px;
+  border-bottom: 2px solid #3498db;
 }
 
 .items {
   height: 500px;
   width: 100%;
 }
+
+.items ul {
+  padding: 5px;
+}
+.items li {
+  list-style-type: none;
+  width: 100%;
+  border: 2px solid #3498db;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+}
+.deleteBtn {
+  cursor: pointer;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+
 .form {
   padding: 30px 40px;
 
@@ -54,6 +80,7 @@ h1 {
   cursor: pointer;
   display: block;
   background-color: #3498db;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
   color: #fff;
   font-size: 16px;
   border-color: 2px solid #3498db;

@@ -4,18 +4,30 @@ const ulElement = document.querySelector("ul");
 const deleteBtnElement = document.createElement("button");
 deleteBtnElement.setAttribute("class", "deleteBtn");
 deleteBtnElement.appendChild(document.createTextNode("X"));
+const form = document.getElementById("form");
 
-let newToDoValue;
-//get the input value
-inputElement.addEventListener("change", (e) => {
-  newToDoValue = e.target.value;
-});
-//create new li
-btnElement.addEventListener("click", () => {
-  const newLiElement = document.createElement("li");
-  newLiElement.appendChild(document.createTextNode(newToDoValue));
-  newLiElement.appendChild("deleteBtnElement");
-  ulElement.appendChild(newLiElement);
-  inputElement.value = "";
-  newToDoValue = "";
+//Create New li
+function createNewLi(newToDo) {
+  const newLi = document.createElement("li");
+  newLi.appendChild(document.createTextNode(newToDo));
+  newLi.appendChild(deleteBtnElement);
+  //append  newLi to ul
+  ulElement.appendChild(newLi);
+}
+
+//Add new To-Do
+function addNewToDo() {
+  let newToDo = inputElement.value;
+  createNewLi(newToDo);
+}
+
+//Show Error
+function showError() {
+  console.log("first");
+}
+//Event listener
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  addNewToDo();
 });
